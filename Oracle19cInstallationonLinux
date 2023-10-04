@@ -5,6 +5,10 @@ if not using internet then Linux local repo must be set before
 -- local repo configuration
 mkdir /localrepo
 cp -rv /run/media/root/OL-8-6-0-BaseOS-x86_64/BaseOS/* /localrepo/
+--move or delete the component of /etc/yum.repos.d
+--sw I make for me to keep software in the directory also for backups
+mv /etc/yum.repos.d/* /sw/
+--create local.repo file as below
 vi /etc/yum.repos.d/local.repo
 -- add below lines and save
 [oel8]
